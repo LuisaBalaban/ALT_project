@@ -32,7 +32,3 @@ When entering the activity, as a teacher you start to see a table connected to a
 ##6. API Rest
 ![Alt text] (https://github.com/LuisaBalaban/ALT_project/blob/main/requests/requests.png)
 ![Alt text] (https://github.com/LuisaBalaban/ALT_project/blob/main/requests/requests1.png)
-
-
-
-
