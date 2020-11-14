@@ -24,10 +24,12 @@ When entering the activity, as a teacher you start to see a table connected to a
 -----
 
 ![alt text](https://github.com/LuisaBalaban/ALT_project/blob/main/UI/1.png)
+*Student UI*
 ![Alt Text](https://github.com/LuisaBalaban/ALT_project/blob/main/UI/2.png)
 ![Alt Text](https://github.com/LuisaBalaban/ALT_project/blob/main/UI/3(2).png)
 ![Alt Text](https://github.com/LuisaBalaban/ALT_project/blob/main/UI/4.png)
 ![Alt Text](https://github.com/LuisaBalaban/ALT_project/blob/main/UI/5.png)
+*Teacher UI*
 ![Alt Text](https://github.com/LuisaBalaban/ALT_project/blob/main/UI/6.png)
 ![Alt Text](https://github.com/LuisaBalaban/ALT_project/blob/main/UI/7.png)
 ![Alt Text](https://github.com/LuisaBalaban/ALT_project/blob/main/UI/8.png)
@@ -42,4 +44,4 @@ When entering the activity, as a teacher you start to see a table connected to a
 -----
 
 ![Alt text](https://github.com/LuisaBalaban/ALT_project/blob/main/requests/requests.png)
-![Alt text](https://github.com/LuisaBalaban/ALT_project/blob/main/requests/requests1.png)
+![Alt text](https://github.com/LuisaBalaban/ALT_project/blob/main/requests/requests1.jpg)
