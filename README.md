@@ -38,7 +38,7 @@ When entering the activity, as a teacher you start to see a table connected to a
 
 ## 5. Database
 -----
-![Alt text](https://github.com/LuisaBalaban/ALT_project/blob/main/requests/db.jpeg)
+![Alt text](https://github.com/LuisaBalaban/ALT_project/blob/main/requests/project_database.jpg)
 
 ## 6. API Rest
 -----
