@@ -3,6 +3,7 @@ import './App.css';
 import Index from './containers/Index'
 import Register from './containers/Register'
 import Enter from './containers/Enter'
+import Activity from './containers/Activity'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {

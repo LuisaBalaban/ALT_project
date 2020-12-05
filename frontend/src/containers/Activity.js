@@ -9,7 +9,7 @@ function Activity()
         <div className="CreateAct">
 
             <label for="class"  id="class" >Class: </label>
-            <input type="text" id="uname" name="uname" value="studentAbc"/><br/>
+            <input type="text" id="uname" name="uname" value="Linear algebra"/><br/>
             </div>
       
         </div>)
