@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <Header/>
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <h3>Here's your way to the class!</h3>
+        <h3>Here's your way to the class! andreea </h3>
        <Form/>
     </div>
   );
