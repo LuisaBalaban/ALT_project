@@ -5,6 +5,7 @@ import '../components/components.css';
 function Activity()
 {
     return(<div>
+        <Header/>
         <h3>Create a new activity</h3>
         <div className="CreateAct">
 

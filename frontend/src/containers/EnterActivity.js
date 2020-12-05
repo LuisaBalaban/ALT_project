@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from '../components/Header';
 import '../components/components.css';
 
-class Enter extends Component {
+class EnterActivity extends Component {
     render() {
       return (
         <div className="Register">
@@ -15,4 +15,4 @@ class Enter extends Component {
     }
 }
 
-export default Enter 
+export default EnterActivity 
