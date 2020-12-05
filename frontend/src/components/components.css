@@ -41,3 +41,18 @@
 {
     margin-top: 20px;
 }
+.Register
+{
+    font-family: 'Lato', sans-serif;
+    color:#566B52;
+    font-size: 20px;
+}
+#radio
+{
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+.msgBtn
+{
+    margin-top: 30px;
+}
