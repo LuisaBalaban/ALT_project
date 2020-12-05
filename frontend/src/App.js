@@ -1,15 +1,17 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
-import Header from './components/Header';
-import Form from './components/Form';
+import Index from './containers/Index'
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Header/>
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <h3>Here's your way to the class! andreea </h3>
-       <Form/>
+
+             <Router>
+             <div>
+              <Route path="/" exact component={Index} />
+              </div>
+              </Router>
     </div>
   );
 }

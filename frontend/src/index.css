@@ -4,13 +4,38 @@ body {
   background-image: url("bck.png") ;
   font-family: 'Lato', sans-serif;
   height: 100vh;
-  background-position: center;
+  background-position: center fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 h3{
-  font-size: 25px;
+  font-size: 55px;
+  margin-top: 200px;
+  color: #566B52;
+}
+.msgBtn
+{
+  margin-top: 10px;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  cursor:pointer;
+  overflow: hidden;
+  text-decoration: none;
+padding: 10px 30px;
+display: inline-block;
+border-radius: 2px;
+width: 10%;
+height: 5% ;
+font-size: 18px;
+font-family: 'Roboto Mono', monospace;
+display: inline-block;
+margin-left: 10px;
+color: #595E58;
+border-color: #595E58;
+
+
 }

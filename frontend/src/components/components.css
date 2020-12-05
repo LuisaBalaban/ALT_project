@@ -17,16 +17,27 @@
 		font-family: 'Roboto Mono', monospace;
 		opacity: 1.5;
         transition: 0.2s;
-
+        border: transparent;
      position:absolute;
      top:0;
      right:0;
+     color: #595E58;
+     
 }
 .Form
 {
     align-items: center;
-    margin-top: 20%;
+    margin-top: 5%;
     font-family: 'Lato', sans-serif;
     font-size: 30px;
-    text-emphasis-color: green;
+    color: #566B52;
+}
+.form-insert
+{
+    margin-top: 50px;
+    
+}
+.form-send
+{
+    margin-top: 20px;
 }

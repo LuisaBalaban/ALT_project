@@ -5,7 +5,7 @@ function Header()
 {
     return(
         <div>
-        <button class="codes">Codes</button>
+        <button className="codes">Codes</button>
         </div>
     )
 }
