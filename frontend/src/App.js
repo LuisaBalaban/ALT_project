@@ -3,8 +3,9 @@ import './App.css';
 import Index from './containers/Index'
 import Register from './containers/Register'
 import EnterActivity from './containers/EnterActivity'
-import Activity from './containers/Activity'
+import newActivity from './containers/newActivity'
 import TeacherMain from './containers/TeacherMain'
+import Course from './containers/Course'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
@@ -17,8 +18,9 @@ function App() {
         </div>  
         <Route path="/register" component={Register} />
         <Route path="/enterActivity" component={EnterActivity} />
-        <Route path="/activity" component={Activity} />
+        <Route path="/newActivity" component={newActivity} />
         <Route path="/teacherMain" component={TeacherMain} />
+        <Route path="/course" component={Course} />
 
      </Router>
      

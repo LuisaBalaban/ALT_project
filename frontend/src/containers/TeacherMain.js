@@ -1,12 +1,12 @@
 import React,{ Component } from 'react'
 import '../components/components.css';
-import Header from '../components/Header';
+import HeaderLogin from '../components/HeaderLogin';
 
 class TeacherMain extends Component {
     render() {
       return (
         <div>
-            <Header/>
+            <HeaderLogin/>
             <h3>What's your plan for today?</h3>
             <div className="buttons">
             <button type="submit" className="msgBtn" onClick="return false;">Create new activity</button><br/>

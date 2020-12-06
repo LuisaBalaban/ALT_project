@@ -16,14 +16,14 @@ class Register extends Component {
             <label for="Student">Teacher</label><br/>
             </div>
 
-            <label for="name"  id="name" >Name: </label>
-            <input type="text" id="name" name="name" value="Student ABC"/><br/>
-            <label for="uname"  id="uname" >Username: </label>
-            <input type="text" id="uname" name="uname" value="studentAbc"/><br/>
-            <label for="pass"  id="uname">Password: </label>
-            <input type="password" id="pass" name="pass" value="abc"/><br/>
-            <label for="email"  id="email">Email: </label>
-            <input type="email" id="email" name="email" value="email@abc.com"/><br/>
+            <label className="label"  for="name"  id="name" >Name: </label>
+            <input className="input" type="text" id="name" name="name" value="Student ABC"/><br/>
+            <label className="label"  for="uname"  id="uname" >Username: </label>
+            <input  className="input" type="text" id="uname" name="uname" value="studentAbc"/><br/>
+            <label className="label"  for="pass"  id="uname">Password: </label>
+            <input  className="input" type="password" id="pass" name="pass" value="abc"/><br/>
+            <label className="label"  for="email"  id="email">Email: </label>
+            <input  className="input" type="email" id="email" name="email" value="email@abc.com"/><br/>
             <button type="submit" className="msgBtn" onClick="return false;">Register</button>
             </div>
       
