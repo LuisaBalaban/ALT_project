@@ -120,5 +120,12 @@
 {
     background-image: url("../images/wow.png");
     width: 20%;
+
+}
+.history
+{
+    align-items: left;
+    margin-top: 100px;
+    position: relative;
     
 }

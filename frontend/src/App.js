@@ -6,6 +6,7 @@ import EnterActivity from './containers/EnterActivity'
 import newActivity from './containers/newActivity'
 import TeacherMain from './containers/TeacherMain'
 import Course from './containers/Course'
+import History from './containers/History'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/newActivity" component={newActivity} />
         <Route path="/teacherMain" component={TeacherMain} />
         <Route path="/course" component={Course} />
+        <Route path="/history" component={History} />
 
      </Router>
      
