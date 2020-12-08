@@ -15,7 +15,7 @@ sequelize.authenticate().then(() => {
     console.log("Unable to connect to database")
 })
 
-app.use(express.static('frontend'))
+app.use(express.static('frontend')) // it all goes in the frontend folder
 
 app.listen(3000) // cred?
 
