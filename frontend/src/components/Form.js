@@ -1,45 +1,65 @@
 import React from 'react'
 import './components.css';
-import { useHistory } from "react-router-dom";
+import { withRouter } from 'react-router-dom';
 
-function Form()
+class Form extends React.Component{
+constructor()
 {
-  const history = useHistory();
-  const routeChangeRegister = () =>{ 
-    let path = `/register`; 
-    history.push(path);
+  super()
+  this.state={
+    id:"",
+    username:"",
+    password:""
+
   }
-  const routeChangeSign = () =>{ 
-    let path = `/TeacherMain`; 
-    history.push(path);
-  }
+  this.handleChange=this.handleChange.bind(this)
+  this.routeChange = this.routeChange.bind(this);
+
+}
+// onSubmit()
+// {
+//   if(this.state.id===1)
+//   {
+
+//   }
+// }
+handleChange(event) {
+  const {name, value, type, checked} = event.target
+  type === "radio" ? this.setState({ [name]: checked }) : this.setState({ [name]: value })
+}
+routeChange() {
+  let path = `/register`;
+  this.props.history.push(path);
+}
+
+render(){
 
     return(
-      <div className="Form">
+      <form className="Form">
            <div className="radio">
-           <input type="radio" id="Student" name="type" value="Student" />
+           <input type="radio" id="Student" name="id" value="Student"  checked={this.state.id === "1"} onChange={this.handleChange}/>
            <label for="Student">Student</label>
       
-           <input type="radio" id="Teacher" name="type" value="Teacher" />
-            <label for="Student">Teacher</label>
+           <input type="radio" id="Teacher" name="id" value="Teacher" checked={this.state.id === "2"} onChange={this.handleChange} />
+            <label for="Teacher" >Teacher</label>
             </div>
            <div className="form-insert">
            
             <label for="uname"  id="uname" >Username: </label>
-            <input type="text" id="uname" name="uname" value="studentAbc"/><br/>
+            <input type="text" id="uname" name="username" value={this.state.username} onChange={this.handleChange}/><br/>
             <label for="pass"  id="uname">Password: </label>
-            <input type="password" id="pass" name="pass" value="abc"/>
+            <input type="password" id="password" name="password" value={this.state.password} onChange={this.handleChange}/>
             
             </div>
            <div className="form-send">
-          <button type="submit" className="msgBtn" onClick={routeChangeSign}>Sign In</button>
-          <button type="submit" className="msgBtn" onClick={routeChangeRegister}>Register</button>
+          <button type="submit" className="msgBtn" >Sign In</button>
+          <button className="msgBtn" onClick={this.routeChange}>Register</button>
           </div>
-        </div>
+        </form>
         
       
     )
-
+    }
 }
 
-export default Form
+export default withRouter(Form)
