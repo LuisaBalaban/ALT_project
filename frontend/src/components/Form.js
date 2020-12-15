@@ -8,14 +8,14 @@ constructor()
 {
   super()
   this.state={
-    id:"",
+    roleId:"",
     username:"",
     password:""
 
   }
   this.handleChange=this.handleChange.bind(this)
   this.routeChange = this.routeChange.bind(this);
-  this.onSend=this.routeChange.bind(this)
+  this.onSend=this.onSend.bind(this)
 
 }
 // onSubmit()
@@ -37,7 +37,7 @@ routeChange() {
 onSend()
 {
   const formData = {
-    id: this.state.id,
+    roleId: this.state.roleId,
     password: this.state.password,
     username: this.state.username
     }
@@ -46,17 +46,26 @@ onSend()
     method: 'get',
     url: 'http://localhost:3000/api/auth/login',
     data: formData,
-    config: { headers: {'Content-Type': 'multipart/form-data' }}
    })
-   .then(function (response) {
-   
+   .then(function (response) { 
   console.log(response);
    })
 .catch(function (response) {
   console.log(response);
 
 });
+
+// axios.get('http://localhost:3000/api/auth/login',{
+//   formData
+// }).then(function (response) {
+//   console.log(response);
+// })
+// .catch(function (error) {
+//   console.log(error);
+// });
 }
+
+
 
 render(){
 
@@ -64,10 +73,10 @@ render(){
       <div>
       <form className="Form">
            <div className="radio">
-           <input type="radio" id="Student" name="id" checked={this.state.id === "1"} value="1"  onChange={this.handleChange}/>
+           <input type="radio" id="Student" name="roleId" checked={this.state.roleId === "1"} value="1"  onChange={this.handleChange}/>
            <label>Student</label>
       
-           <input type="radio" id="Teacher" name="id" checked={this.state.id === "2"} value="2" onChange={this.handleChange} />
+           <input type="radio" id="Teacher" name="roleId" checked={this.state.roleId === "2"} value="2" onChange={this.handleChange} />
             <label>Teacher</label>
             </div>
            <div className="form-insert">

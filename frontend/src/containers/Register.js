@@ -9,7 +9,7 @@ class Register extends Component {
   constructor() {
     super()
     this.state = {
-      id:"",
+      roleId:"",
       username:"",
       password:"",
       name:"",
@@ -34,11 +34,11 @@ class Register extends Component {
     e.preventDefault()
 
     const userObject = {
-      id:this.state.id,
+      roleId:this.state.roleId,
       username:this.state.username,
       password:this.state.password,
-        name: this.state.name,
-        email: this.state.email
+      name: this.state.name,
+       email: this.state.email
     };
 
     axios.post('http://localhost:3000/api/auth/register', userObject)
@@ -60,24 +60,26 @@ class Register extends Component {
         <h3>Create an account!</h3>
         <div className="Register">
         <form onSubmit={this.handleSubmit}>
-        <div id="radio" onChange={this.onChangeValue}>
-        <input type="radio" id="Student" name="id" checked={this.state.id === "1"} value="1"  onChange={this.handleChange}/>
+        <div id="radio" >
+        <input type="radio"  name="roleId" checked={this.state.roleId === "1"} value="1"  onChange={this.handleChange}/>
            <label>Student</label>
       
-           <input type="radio" id="Teacher" name="id" checked={this.state.id === "2"} value="2" onChange={this.handleChange} />
+           <input type="radio" name="roleId" checked={this.state.roleId === "2"} value="2" onChange={this.handleChange} />
             <label>Teacher</label>
             </div>
 
-            <label className="label"  for="name"  id="name" >Name: </label>
+            <label className="label"   id="name" >Name: </label>
             <input className="input" type="text" id="name" name="name"  value={this.state.name} onChange={this.handleChange}/><br/>
-            <label className="label"  for="username"  id="username" >Username: </label>
+            <label className="label"   id="username" >Username: </label>
             <input  className="input" type="text" id="username" name="username" value={this.state.username} onChange={this.handleChange}/><br/>
-            <label className="label"  for="password"  id="password">Password: </label>
+            <label className="label"   id="password">Password: </label>
             <input  className="input" type="password" id="password" name="password"value={this.state.password} onChange={this.handleChange}/><br/>
-            <label className="label"  for="email"  id="email"  >Email: </label>
+            <label className="label"   id="email"  >Email: </label>
             <input  className="input" type="email" id="email" name="email" value={this.state.email} onChange={this.handleChange}/><br/>
             <button type="submit" className="msgBtn" onClick={this.onSubmit}>Register</button>
+            
             </form>
+            <button className="msgBtn" onClick={this.routeChange}>Back to Login</button>
             </div>
       
         </div>)
