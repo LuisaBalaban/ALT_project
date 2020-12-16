@@ -129,3 +129,34 @@
     position: relative;
     
 }
+.form-insert.focussed input {
+    padding: 24px 16px 8px 16px;
+  }
+  .form-insert.focussed input {
+    top: 4px;
+    opacity: 1;
+    color: #d9f3e4;
+  }
+  .form-insert.locked {
+   pointer-events: none;
+  }
+  .form-insert input {
+    width: 15%;
+    height: 50px;
+    position: relative;
+    margin-bottom: 10px;
+    padding: 0px 16px;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Gotham SSm A', 'Gotham SSm B', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+   background-color: white;
+    color: #282828;
+    outline: none;
+    box-shadow: 0px 4px 20px 0px transparent;
+    transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out, 0.1s padding ease-in-out;
+    -webkit-appearance: none;
+  }
+ 

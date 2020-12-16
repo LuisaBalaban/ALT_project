@@ -25,7 +25,7 @@ const addActivity = async (require,response) =>{
 const findActivityByCode = async (require,response) => {
     const body = require.body
     try{
-        let activity = await ActivityModel.findOne({where:{activity_code:activity_code}})
+        let activity = await ActivityModel.findOne({where:{activity_code:body.activity_code}})
         return response.status(200).json({
             msg:"Activity successfully retrieved",
             data:activity

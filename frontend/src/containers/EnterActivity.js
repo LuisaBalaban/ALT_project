@@ -26,12 +26,12 @@ class EnterActivity extends Component {
         const enteredCode = {
             activity_code: this.state.activity_code
         }
-        axios.get('/getActivity', {
-            activity_code:enteredCode
-          })
-          .then(function (response) {
-            console.log(response);
-          })
+        axios.get('http://localhost:3000/getActivity', enteredCode).then(response => {
+      console.log(response)
+    }).catch(error => {
+      console.log(error.response)
+    })
+
     }
 
     render() {

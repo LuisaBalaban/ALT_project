@@ -44,6 +44,7 @@ class Register extends Component {
     axios.post('http://localhost:3000/api/auth/register', userObject)
         .then((res) => {
             console.log(res.data)
+            alert("User was created!")
         }).catch((error) => {
             console.log(error)
         });
