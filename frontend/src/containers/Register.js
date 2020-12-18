@@ -83,7 +83,7 @@ class Register extends Component {
     }
     else
   // 
-  {}
+  {alert("Invalid user inputs")}
   }
 
 

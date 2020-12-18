@@ -1,6 +1,6 @@
 # How to download ALTfeed
 
-This project containe frontend and backend components
+This project contains frontend and backend components
 
 ## Backend installation
 
