@@ -1,3 +1,5 @@
+## Information about downloading ALTfeed app - on frontend branch
+-----
 ## 1. Introduction
 -----
 
