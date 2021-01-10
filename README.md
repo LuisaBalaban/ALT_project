@@ -40,7 +40,7 @@ When entering the activity, as a teacher you start to see a table connected to a
 
 ## 5. Database
 -----
-![Alt text](https://github.com/LuisaBalaban/ALT_project/blob/main/requests/ultima%20bazaaaaaa.png)
+![Alt text](https://github.com/LuisaBalaban/ALT_project/blob/main/requests/ultima%20baza%20de%20date%20promit%2C%20e%20aia%20buna.jpg)
 
 ## 6. API Rest
 -----
