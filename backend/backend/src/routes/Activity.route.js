@@ -4,6 +4,6 @@ const ActivityController = require('../controllers/Activity.controller')
 
 
 router.post('/addActivity',ActivityController.addActivity)
-router.get('/getActivity',ActivityController.findActivityByCode)
+router.post('/getActivity',ActivityController.findActivityByCode)
 
 module.exports = router

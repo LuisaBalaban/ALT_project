@@ -42,12 +42,39 @@ class Form extends React.Component {
 
     }
 
-    axios.get('http://localhost:3000/api/auth/login', formData).then(response => {
+    axios.post('http://localhost:3000/api/auth/login', formData).then(response => {
       console.log(response)
+      if(response.status===200)
+      {
+        if(formData.roleId==2)
+      {
+      let path = `/TeacherMain`;
+      this.props.history.push({
+        pathname: path,
+        state: {
+            roleId: this.state.roleId,
+            username: this.state.username
+        }
+    });
+      console.log(formData)
+       }
+      if(formData.roleId==1)
+     {
+      let path = `/enterActivity`;
+      this.props.history.push({
+        pathname: path,
+        state: {
+            roleId: this.state.roleId,
+            username: this.state.username
+        }
+    });
+     }}
     }).catch(error => {
       console.log(formData)
       console.log(error.response)
+      
     })
+    
 
   }
 

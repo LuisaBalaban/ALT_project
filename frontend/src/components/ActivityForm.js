@@ -9,7 +9,7 @@ class ActivityForm extends React.Component
         this.state={
             className:"",
             date:"",
-            time:"",
+            time:""
 
         }
         this.handleChange=this.handleChange.bind(this)

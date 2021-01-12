@@ -5,12 +5,16 @@ import axios from 'axios'
 
 class EnterActivity extends Component {
 
-    constructor()
+    constructor(props)
     {
-        super()
-        this.state={
-            activity_code:""
-        }
+        super(props)
+        this.state = {
+            roleId: this.props.location.state.roleId,
+            username: this.props.location.state.username,
+            activity_code: ""
+      
+          }
+          console.log(this.props.location.state.username)
         this.handleChange=this.handleChange.bind(this)
         this.EnterActivity = this.EnterActivity.bind(this);
     }
@@ -26,7 +30,8 @@ class EnterActivity extends Component {
         const enteredCode = {
             activity_code: this.state.activity_code
         }
-        axios.get('http://localhost:3000/getActivity', enteredCode).then(response => {
+       
+        axios.post('http://localhost:3000/api/activity/getActivity', enteredCode).then(response => {
       console.log(response)
     }).catch(error => {
       console.log(error.response)
@@ -37,9 +42,12 @@ class EnterActivity extends Component {
     render() {
       return (
         <div className="Register">
-            <HeaderLogin/>
+        <div>
+           <button className="codes">Codes</button>
+           <p className="name">{this.state.username}</p>
+           </div>
         <h3>Enter your class</h3>
-        <label  >Activity Code: </label>
+        <label >Activity Code: </label>
             <input type="text" id="activity_code" name="activity_code"  value={this.state.activity_code} onChange={this.handleChange}/><br/>
             <button className="form-send" className="msgBtn" onClick={this.EnterActivity}>Enter</button>
         </div>)
