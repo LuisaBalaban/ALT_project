@@ -29,9 +29,10 @@ const register = async (req, res) => {
 
 const login = async (req, res) => {
     const body = req.body;
+   
     try{
         let user = await User.findOne({where:{username:body.username}})
-       
+       console.log(user)
         if(user.password===body.password)
         {
             return res.status(200).json({msg:'authentification successful', 
@@ -46,6 +47,7 @@ const login = async (req, res) => {
         console.log(error)
         res.status(404).json({
             msg:'user not found'
+           
            
         })
     }    

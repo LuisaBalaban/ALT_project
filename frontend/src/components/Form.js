@@ -45,6 +45,7 @@ class Form extends React.Component {
     axios.get('http://localhost:3000/api/auth/login', formData).then(response => {
       console.log(response)
     }).catch(error => {
+      console.log(formData)
       console.log(error.response)
     })
 
