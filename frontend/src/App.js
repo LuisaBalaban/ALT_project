@@ -7,6 +7,7 @@ import newActivity from './containers/newActivity'
 import TeacherMain from './containers/TeacherMain'
 import Course from './containers/Course'
 import History from './containers/History'
+import FeedbackG from './containers/FeedbackG'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
         <Route path="/teacherMain" component={TeacherMain} />
         <Route path="/course" component={Course} />
         <Route path="/history" component={History} />
+
+        <Route path="/FeedbackG" component={FeedbackG} />
 
      </Router>
      

@@ -5,6 +5,7 @@ const Sequelize = require('sequelize')
 //add feedback into existing activity 
 const addFeedback = async (require,response) =>{
     const body = require.body
+    console.log(body)
     try{
         let feedback = await FeedbackModel.create({
             type_id:body.type_id,

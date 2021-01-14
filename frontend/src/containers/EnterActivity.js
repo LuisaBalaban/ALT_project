@@ -11,6 +11,7 @@ class EnterActivity extends Component {
         this.state = {
             roleId: this.props.location.state.roleId,
             username: this.props.location.state.username,
+            description:this.props.location.state.description,
             activity_code: ""
       
           }
@@ -32,7 +33,37 @@ class EnterActivity extends Component {
         }
        
         axios.post('http://localhost:3000/api/activity/getActivity', enteredCode).then(response => {
-      console.log(response)
+          console.log(response)
+          if(response.status===200)
+      {
+          if(this.state.roleId==1){
+           let path = `/FeedbackG`;
+          this.props.history.push({
+            pathname: path,
+            state: {
+                roleId: this.state.roleId,
+                username: this.state.username,
+                activity_code: this.state.activity_code,
+                description:this.state.description
+            }
+          
+        });}
+        else if(this.state.roleId==2){
+          let path = `/FeedbackT`;
+          this.props.history.push({
+            pathname: path,
+            state: {
+                roleId: this.state.roleId,
+                username: this.state.username,
+                activity_code: this.state.activity_code,
+                description:this.state.description
+            }
+          
+        });
+
+        }
+      }
+     
     }).catch(error => {
       console.log(error.response)
     })

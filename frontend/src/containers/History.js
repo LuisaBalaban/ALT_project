@@ -28,14 +28,16 @@ class History extends React.Component
             
      }
         
-        FindActivity(e)
+        FindActivity()
        {
-        e.preventDefault()
+    
         const enteredCode = {
             activity_code: this.state.activity_code
+            
         }
-       
-        axios.post('http://localhost:3000/api/activity/getActivity', enteredCode).then(response => {
+        console.log(enteredCode)
+        axios.get('http://localhost:3000/api/feedback/getAllFedbackByActivityId', enteredCode).then(response => {
+
       console.log(response)
     }).catch(error => {
       console.log(error.response)
