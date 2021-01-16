@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import HeaderLogin from '../components/HeaderLogin';
 import ActivityForm from '../components/ActivityForm';
 import '../components/components.css';
-import smiley from '../images/smiley.png'
-import confused from '../images/confused.png'
-import bored from '../images/bored.png'
-import wow from '../images/wow.png'
 import axios from 'axios'
 
 class FeedbackT extends React.Component
@@ -21,7 +17,9 @@ class FeedbackT extends React.Component
             activity_code:this.props.location.state.activity_code,
             description:this.props.location.state.description,
             type_id:"",
-            date:""
+            date:"",
+            message: "",
+            items: []
       
           }
       
@@ -31,6 +29,16 @@ class FeedbackT extends React.Component
         return (<div>  
            <button className="codes">Codes</button>
            <p className="name">{this.state.username}</p>
+           <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
         </div>)
     }
 }

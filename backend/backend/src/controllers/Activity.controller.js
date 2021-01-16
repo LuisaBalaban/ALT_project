@@ -38,7 +38,21 @@ const findActivityByCode = async (require,response) => {
         })
     }
 }
+const getActIdByCode = async (require,response) =>{
+    const body = require.body
+    try{
+        let activity = await ActivityModel.findOne({where:{activity_code:body.activity_code}})
+        return response.status(200).json({
+            msg:"Activity successfully retrieved",
+            data:activity.dataValues.id
+        })
+    }catch(error){
+        return response.status(404).json({
+            msg:"activity not found"
+        })
+    }
+    }
 
 //+ get history -> nr studenti + feedback-uri 
 
-module.exports = {addActivity,findActivityByCode}
+module.exports = {addActivity,findActivityByCode,getActIdByCode}

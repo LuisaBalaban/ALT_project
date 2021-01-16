@@ -34,81 +34,146 @@ class FeedbackG extends React.Component
         // this.setState({ type_id : 'wow',
         //                 date:new Date().toLocaleDateString()} );
         // e.preventDefault()
-          const feedbackObject = {
-            type_id : 1,
-            user_id: this.state.roleId,
-            activity_id: this.state.activity_code,
-            date: new Date() 
+        const activCode={
+          activity_code:this.state.activity_code
+
+        }
+        console.log(activCode)
+        axios.post('http://localhost:3000/api/activity/getActIdByCode', activCode)
+        .then((res) => {
+          console.log(res.data)
+          this.setState={
+            activity_id: res.data.activity_id
           }
-          console.log(feedbackObject)
-    
-        axios.post('http://localhost:3000/api/feedback/createFeedback', feedbackObject)
-          .then((res) => {
-            console.log(res.data)
-            console.log("feedback was given")
-          }).catch((error) => {
-            console.log(error)
-          });
+            const feedbackObject = {
+              type_id : 1,
+              user_id: this.state.roleId,
+              activity_id: res.data.data,
+              date: new Date() 
+            }
+            console.log(feedbackObject)
+      
+          axios.post('http://localhost:3000/api/feedback/createFeedback', feedbackObject)
+            .then((res) => {
+              console.log(res.data)
+              console.log("feedback was given")
+            }).catch((error) => {
+              console.log(error)
+            });
+          
+        }).catch((error) => {
+          console.log(error)
+        });
+      
+         
         }
         clickBored() {
             // this.setState({ type_id : 'wow',
             //                 date:new Date().toLocaleDateString()} );
         
-              const feedbackObject = {
-                type_id : 2,
-                user_id: this.state.roleId,
-                activity_id: this.state.activity_code,
-                date: new Date()
+            const activCode={
+              activity_code:this.state.activity_code
+    
+            }
+            console.log(activCode)
+            axios.post('http://localhost:3000/api/activity/getActIdByCode', activCode)
+            .then((res) => {
+              console.log(res.data)
+              this.setState={
+                activity_id: res.data.activity_id
               }
-              console.log(feedbackObject)
-        
-            axios.post('http://localhost:3000/api/feedback/createFeedback', feedbackObject)
-              .then((res) => {
-                console.log(res.data)
-                console.log("feedback was given")
-              }).catch((error) => {
-                console.log(error)
-              });
+                const feedbackObject = {
+                  type_id : 2,
+                  user_id: this.state.roleId,
+                  activity_id: res.data.data,
+                  date: new Date() 
+                }
+                console.log(feedbackObject)
+          
+              axios.post('http://localhost:3000/api/feedback/createFeedback', feedbackObject)
+                .then((res) => {
+                  console.log(res.data)
+                  console.log("feedback was given")
+                }).catch((error) => {
+                  console.log(error)
+                });
+              
+            }).catch((error) => {
+              console.log(error)
+            });
+          
             }
         clickConfused() {
                 // this.setState({ type_id : 'wow',
                 //                 date:new Date().toLocaleDateString()} );
               
-                  const feedbackObject = {
-                    type_id : 3,
-                    user_id: this.state.roleId,
-                    activity_id: this.state.activity_code,
-                    date: new Date()
+                const activCode={
+                  activity_code:this.state.activity_code
+        
+                }
+                console.log(activCode)
+                axios.post('http://localhost:3000/api/activity/getActIdByCode', activCode)
+                .then((res) => {
+                  console.log(res.data)
+                  this.setState={
+                    activity_id: res.data.activity_id
                   }
-                  console.log(feedbackObject)
-            
-                axios.post('http://localhost:3000/api/feedback/createFeedback', feedbackObject)
-                  .then((res) => {
-                    console.log(res.data)
-                    console.log("feedback was given")
-                  }).catch((error) => {
-                    console.log(error)
-                  });
+                    const feedbackObject = {
+                      type_id : 3,
+                      user_id: this.state.roleId,
+                      activity_id: res.data.data,
+                      date: new Date() 
+                    }
+                    console.log(feedbackObject)
+              
+                  axios.post('http://localhost:3000/api/feedback/createFeedback', feedbackObject)
+                    .then((res) => {
+                      console.log(res.data)
+                      console.log("feedback was given")
+                    }).catch((error) => {
+                      console.log(error)
+                    });
+                  
+                }).catch((error) => {
+                  console.log(error)
+                });
+              
                 }
 clickSmiley() {
                     // this.setState({ type_id : 'wow',
                     //                 date:new Date().toLocaleDateString()} );
                
-                      const feedbackObject = {
-                        type_id : 4,
-                        user_id: this.state.roleId,
-                        activity_id: this.state.activity_code,
-                        date: new Date()
+                    const activCode={
+                      activity_code:this.state.activity_code
+            
+                    }
+                    console.log(activCode)
+                    axios.post('http://localhost:3000/api/activity/getActIdByCode', activCode)
+                    .then((res) => {
+                      console.log(res.data)
+                      this.setState={
+                        activity_id: res.data.activity_id
                       }
-                      console.log(feedbackObject)
-                
-                    axios.post('http://localhost:3000/api/feedback/createFeedback', feedbackObject)
-                      .then((res) => {
-                        console.log(res.data)
-                        console.log("feedback was given")
-                      }).catch((error) => {
-                        console.log(error)
-                      });
+                        const feedbackObject = {
+                          type_id : 4,
+                          user_id: this.state.roleId,
+                          activity_id: res.data.data,
+                          date: new Date() 
+                        }
+                        console.log(feedbackObject)
+                  
+                      axios.post('http://localhost:3000/api/feedback/createFeedback', feedbackObject)
+                        .then((res) => {
+                          console.log(res.data)
+                          console.log("feedback was given")
+                        }).catch((error) => {
+                          console.log(error)
+                        });
+                      
+                    }).catch((error) => {
+                      console.log(error)
+                    });
+                  
                     }
                     
 

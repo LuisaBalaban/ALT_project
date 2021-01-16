@@ -9,6 +9,7 @@ import Course from './containers/Course'
 import History from './containers/History'
 import FeedbackG from './containers/FeedbackG'
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import FeedbackT from './containers/FeedbackT'
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
         <Route path="/teacherMain" component={TeacherMain} />
         <Route path="/course" component={Course} />
         <Route path="/history" component={History} />
-
+        <Route path="/FeedbackT" component={FeedbackT} />
         <Route path="/FeedbackG" component={FeedbackG} />
 
      </Router>

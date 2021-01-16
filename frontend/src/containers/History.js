@@ -30,15 +30,12 @@ class History extends React.Component
         
         FindActivity()
        {
-    
         const enteredCode = {
-            activity_code: this.state.activity_code
-            
+            activity_code: this.state.activity_code 
         }
         console.log(enteredCode)
-        axios.get('http://localhost:3000/api/feedback/getAllFedbackByActivityId', enteredCode).then(response => {
-
-      console.log(response)
+        axios.post('http://localhost:3000/api/feedback/getFeedbackCountByActivityCode',enteredCode).then(response => 
+        {console.log(response)
     }).catch(error => {
       console.log(error.response)
     })
@@ -73,8 +70,8 @@ class History extends React.Component
 <input className="input" type="date" id="date" name="date" value={this.state.date} onChange={this.handleChange}/><br/>
 <label className="label"   id="Code" >Code: </label>
             <input className="input" type="text" id="activity_code" name="activity_code" value={this.state.activity_code} onChange={this.handleChange} />
-            <button type="submit" className="msgBtn" onClick={this.FindActivity}>Explore</button><br/>
-            <button type="submit" className="msgBtn" onClick={this.mainMenu}>Main Menu</button><br/>
+            <button  className="msgBtn" onClick={this.FindActivity}>Explore</button><br/>
+            <button  className="msgBtn" onClick={this.mainMenu}>Main Menu</button><br/>
             </div>
         )
     }
