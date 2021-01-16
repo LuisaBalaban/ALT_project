@@ -2,6 +2,7 @@ import React from 'react'
 import HeaderLogin from '../components/HeaderLogin';
 import ActivityForm from '../components/ActivityForm';
 import '../components/components.css';
+
 import axios from 'axios'
 
 
@@ -60,7 +61,7 @@ class History extends React.Component
             {/* <HeaderLogin/> */}
             <div>
            <button className="codes">Codes</button>
-           <p className="name">{this.state.username}</p>
+           <p className="name">Prof. {this.state.username}</p>
            </div>
             {/* <ActivityForm/> */}
 
