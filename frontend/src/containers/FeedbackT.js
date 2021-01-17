@@ -27,7 +27,8 @@ class FeedbackT extends React.Component
             totalInteresting:"",
             totalBoring:""
           }
- 
+         
+          
 
     }
       
@@ -37,22 +38,6 @@ class FeedbackT extends React.Component
         () => this.tick(),
         1000
       );
-      const enteredCode = {
-        activity_code: this.state.activity_code
-    }
-   
-    axios.post('http://localhost:3000/api/activity/getActivity', enteredCode).then(response => {
-      console.log(response)
-      if(response.status===200)
-  {
-    this.setState={
-      description: response.data.data.description
-    }
-    console.log(this.state.description)
-  }
-}).catch(error => {
-  console.log(error.response)
-})
     }
 
     componentWillUnmount() {
@@ -85,8 +70,8 @@ class FeedbackT extends React.Component
 
         return (
         <div>  
-            <p className="name">Prof. {this.state.username}</p>
-        <h3>{this.state.description}</h3>
+            <p className="name">{this.state.username}</p>
+        <h3>{this.state.activity_code}</h3>
            <button className="codes">Codes</button>
 <div>
         <p  class="response">{this.state.totalAmazing} x </p>
