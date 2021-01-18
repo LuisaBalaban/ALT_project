@@ -20,11 +20,11 @@ module.exports = sequelize.define("feedbacks", {
     activity_id:{
         type:Sequelize.INTEGER,
         allowNull:true
-    },
-    date:
-    {
-        type:Sequelize.DATE,
-        allowNull:false
     }
+    // date:
+    // {
+    //     type:Sequelize.DATE,
+    //     allowNull:false
+    // }
 })
 

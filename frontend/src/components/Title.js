@@ -4,7 +4,7 @@ import './components.css'
 function Title()
 {
     return(
-        <h3>Here's your way to the class!</h3>
+        <h3 id="mainTitle">Here's your way to the class!</h3>
     )
 }
 

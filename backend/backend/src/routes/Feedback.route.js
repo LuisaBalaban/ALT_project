@@ -8,4 +8,5 @@ router.get('/getFeedbackByType', FeedbackController.findFeedbackByType);
 router.get('/getAllFedbackByActivityId', FeedbackController.findAllFeedbackByActivityId);
 router.get('/getFeedbackCountByActivityId', FeedbackController.findFeedbackCountByActivityId);
 router.post('/getFeedbackCountByActivityCode', FeedbackController.findFeedbackCountByActivityCode);
+router.post('/findLastInsertedFeedback', FeedbackController.findLastInsertedFeedback);
 module.exports = router

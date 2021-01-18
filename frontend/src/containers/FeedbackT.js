@@ -23,7 +23,7 @@ class FeedbackT extends React.Component
             type_id:"",
             date: new Date(),
             totalOK:"",
-            totalAmazing:"555",
+            totalAmazing:"",
             totalInteresting:"",
             totalBoring:""
           }
@@ -81,11 +81,15 @@ class FeedbackT extends React.Component
       console.log( this.state );
 
         return (
-        <div>  
-            <p className="name">{this.state.username}</p>
-        <h3>{this.state.activity_code}</h3>
-           <button className="codes">Codes</button>
-<div>
+          <div>
+            <div>
+          <button className="codes" onClick={this.close} id="close">Exit</button>
+      <button className="codes">Codes</button>
+      <p className="name">{this.state.username}</p>
+      </div>
+      <div  className="details">
+      <h3 className="titles">{this.state.description}</h3>
+      <p className="smallIntro">Course code: {this.state.activity_code}</p></div>
         <p  class="response">{this.state.totalAmazing} x </p>
            <img  class="response" src={smiley}></img>
            <p  class="response">{this.state.totalOK} x </p>
@@ -94,8 +98,9 @@ class FeedbackT extends React.Component
            <img class="response" src={bored}></img>
            <p  class="response">{this.state.totalBoring} x</p>
            <img  class="response" src={confused}></img>
+           <h4></h4>
            </div>
-        </div>)
+       )
     }
 }
 

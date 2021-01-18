@@ -10,8 +10,7 @@ const addFeedback = async (require,response) =>{
         let feedback = await FeedbackModel.create({
             type_id:body.type_id,
             user_id:body.user_id,
-            activity_id:body.activity_id,
-            date:body.date
+            activity_id:body.activity_id
         })
         return response.status(200).json({
             msg:"feedback successfully added",
@@ -42,7 +41,9 @@ const findFeedbackByType = async (require,response) => { // avem nevoie de asta?
 const findFeedbackCountByActivityId = async (require,response) => {
     const body = require.body
     try{
-        let feedback = await FeedbackModel.findAll({where:{activity_id:body.activity_id}});
+        let feedback = await FeedbackModel.findAll({where:{activity_id:body.activity_id,
+        description:body.description,
+        date:body.date}});
         let totalOK=0, totalInteresting=0, totalAmazing=0, totalBoring=0;
         for(let i=0; i<feedback.length;i++)
         {
@@ -129,6 +130,22 @@ const findFeedbackCountByActivityCode = async (require,response) => {
     }
 }
 
+const findLastInsertedFeedback = async (require,response) => {
+    const body = require.body;
+    // sa trimita si user id ca sa verific daca e prof sau nu
+    try{
+        let feedback = await FeedbackModel.findAll({where:{activity_id:body.activity_id}});
+        return response.status(200).json({
+            msg:"Feedback successfully retrieved",
+            data:feedback[feedback.length-1]
+        })
+    }catch(error){
+        return response.status(404).json({
+            msg:"Feedback not found"
+        })
+    }
+}
+
 const findAllFeedbackByActivityId = async (require,response) => {
     const body = require.body;
     // sa trimita si user id ca sa verific daca e prof sau nu
@@ -153,4 +170,4 @@ const findAllFeedbackByActivityId = async (require,response) => {
 //+ find all feedbacks for a specific activity!
 //+ find all feedbacks
 
-module.exports = {addFeedback,findFeedbackByType, findFeedbackCountByActivityId, findAllFeedbackByActivityId, findFeedbackCountByActivityCode}
+module.exports = {addFeedback,findFeedbackByType, findFeedbackCountByActivityId, findAllFeedbackByActivityId, findFeedbackCountByActivityCode, findLastInsertedFeedback}

@@ -10,7 +10,6 @@ class FeedbackG extends React.Component
 {
   constructor(props)
     {
-      
         super(props)
         this.state = {
             
@@ -18,9 +17,7 @@ class FeedbackG extends React.Component
             username: this.props.location.state.username,
             activity_code:this.props.location.state.activity_code,
             description:this.props.location.state.description,
-            type_id:"",
-            date:""
-      
+            type_id:""
           }
       
           this.clickWow = this.clickWow.bind(this)
@@ -49,7 +46,7 @@ class FeedbackG extends React.Component
               type_id : 1,
               user_id: this.state.roleId,
               activity_id: res.data.data,
-              date: new Date() 
+              
             }
             console.log(feedbackObject)
       
@@ -86,7 +83,7 @@ class FeedbackG extends React.Component
                   type_id : 2,
                   user_id: this.state.roleId,
                   activity_id: res.data.data,
-                  date: new Date() 
+                
                 }
                 console.log(feedbackObject)
           
@@ -122,7 +119,7 @@ class FeedbackG extends React.Component
                       type_id : 3,
                       user_id: this.state.roleId,
                       activity_id: res.data.data,
-                      date: new Date() 
+                    
                     }
                     console.log(feedbackObject)
               
@@ -158,7 +155,7 @@ clickSmiley() {
                           type_id : 4,
                           user_id: this.state.roleId,
                           activity_id: res.data.data,
-                          date: new Date() 
+                         
                         }
                         console.log(feedbackObject)
                   
@@ -188,18 +185,21 @@ clickSmiley() {
     render() {
         return (<div>
                <div>
-               <button onClick={this.close} id="close">Close the activity</button>
+               <button className="codes" onClick={this.close} id="close">Exit</button>
            <button className="codes">Codes</button>
            <p className="name">{this.state.username}</p>
            </div>
-           <p>Course code: {this.state.activity_code}</p>
+           <div  className="details">
+           <h3 className="titles">{this.state.description}</h3>
+           <p className="smallIntro">Course code: {this.state.activity_code}</p></div>
+           <div className="feedBackSpace">
             <button class="feedbackBtnsUp"><img class="feedbackBtns" src={wow} alt="wow emoji" onClick={this.clickWow} /></button>
             <button class="feedbackBtnsUp"><img class="feedbackBtns" src={confused} alt="confused emoji" onClick={this.clickConfused} /></button>
             <br></br>
             <button class="feedbackBtns"><img class="feedbackBtns" src={smiley} alt="smiley emoji" onClick={this.clickSmiley} /></button>
     
             <button class="feedbackBtns"><img class="feedbackBtns" src={bored} alt="bored emoji" onClick={this.clickBored} /></button>
-
+</div>
         </div>)
     }
 }

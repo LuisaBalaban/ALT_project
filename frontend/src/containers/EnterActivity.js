@@ -36,7 +36,11 @@ class EnterActivity extends Component {
           console.log(response)
           if(response.status===200)
       {
+        this.setState({
+          description:response.data.data.description
+       })
           if(this.state.roleId==1){
+           
            let path = `/FeedbackG`;
           this.props.history.push({
             pathname: path,
@@ -44,7 +48,7 @@ class EnterActivity extends Component {
                 roleId: this.state.roleId,
                 username: this.state.username,
                 activity_code: this.state.activity_code,
-                description:this.state.description
+                description:response.data.data.description
             }
           
         });}
@@ -56,12 +60,13 @@ class EnterActivity extends Component {
                 roleId: this.state.roleId,
                 username: this.state.username,
                 activity_code: this.state.activity_code,
-                description:this.state.description
+                description:response.data.data.description
             }
           
         });
 
         }
+        console.log(this.state.description)
       }
      
     }).catch(error => {
