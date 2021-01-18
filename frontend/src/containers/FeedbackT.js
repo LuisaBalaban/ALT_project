@@ -44,26 +44,38 @@ class FeedbackT extends React.Component
       clearInterval(this.timerID);
     }
 
-    
+    componentDidUpdate(previousProps, previousState) {
+      if (previousProps.data !== this.props.data) {
+          this.setState({
+            totalAmazing: this.props.data.totalAmazing,
+            totalOK: this.props.data.totalOK,
+            totalBoring: this.props.data.totalBoring,
+            totalInteresting: this.props.data.totalInteresting})
+      }
+
+  }
   tick() {
     const enteredCode = {
       activity_code: this.state.activity_code 
   }
-    
+ 
   var self=this;
     axios.post('http://localhost:3000/api/feedback/getFeedbackCountByActivityCode',enteredCode).then(response => 
     {
-      self.setState={
+      self.setState({
         totalAmazing: response.data.data.totalAmazing,
         totalOK: response.data.data.totalOK,
         totalBoring: response.data.data.totalBoring,
         totalInteresting: response.data.data.totalInteresting
-    }
+        })
+
       console.log(response)
       console.log(response.data.data.totalAmazing)
       }).catch(error => {
        console.log(error.response)})
        console.log(this.state.totalAmazing)
+      
+      
   }
     render() {
       console.log( this.state );
