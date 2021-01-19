@@ -29,8 +29,6 @@ const findActivityByCode = async (require,response) => {
         return response.status(200).json({
             msg:"Activity successfully retrieved",
             data:activity
-            //luisa stocheaza id-ul activitatii curente
-            //luisa trimite feedback + id activit 
         })
     }catch(error){
         return response.status(404).json({
@@ -52,7 +50,4 @@ const getActIdByCode = async (require,response) =>{
         })
     }
     }
-
-//+ get history -> nr studenti + feedback-uri 
-
 module.exports = {addActivity,findActivityByCode,getActIdByCode}
